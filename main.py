@@ -48,6 +48,17 @@ def main():
     # Call a function with an optional argument 
     bake_cookie (ingredients_list, snickerdoodle, temp, cutter = "heart")
 
+    print()
+
+    # Reviewing optional keyword arguments
+    print(calculate_numbers(2, 3))
+    print(calculate_numbers(2, 3, "subtract"))
+    print(calculate_numbers(2, 3, operation = "subtract"))
+
+    # you can mix data types in the same list
+    numbers = [5, 5, 6, 5.5, 7, 42, "hi"]
+    list_iteration(numbers)
+
 def bake_cookie (ingredients, instructions, tempature, cutter = "circle"): 
     # Print the list of ingredients
     for item in ingredients: 
@@ -62,5 +73,24 @@ def bake_cookie (ingredients, instructions, tempature, cutter = "circle"):
     # Specify which cookie cutter to use
     print(f"Now use a {cutter} cutter")
 
+def calculate_numbers(x, y, operation="add"):
+    if operation == "add":
+        return x + y
+    # Means else if
+    elif operation == "subtract":
+        return x - y
+
+# Different ways to modify values whle itterating
+def list_iteration(input_list):
+    # 1. create a new list from 
+    new_list = []
+    for item in input_list: 
+        new_list.append(item *2)
+    print(new_list)
+
+    # 2. LIST COMPERHENSION --> extra useful in data science (going through rows/columns)
+    input_list =  [item * 2 for item in input_list]
+    print(input_list)
+
 if __name__ == "__main__":
-    main()
+    main() 
