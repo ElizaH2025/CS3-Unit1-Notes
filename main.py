@@ -59,6 +59,12 @@ def main():
     numbers = [5, 5, 6, 5.5, 7, 42, "hi"]
     list_iteration(numbers)
 
+    # test different container types
+    list_demo()
+    tuple_demo()
+    set_demo()
+    dict_demo()
+
 def bake_cookie (ingredients, instructions, tempature, cutter = "circle"): 
     # Print the list of ingredients
     for item in ingredients: 
@@ -92,5 +98,38 @@ def list_iteration(input_list):
     input_list =  [item * 2 for item in input_list]
     print(input_list)
 
-if __name__ == "__main__":
-    main() 
+def list_demo():
+    print("LIST DEMO:")
+    my_list = ["h", "e", "l", "l", "o"]
+    
+    # Add an itme to list
+    my_list.append("!")
+    print(my_list)
+
+    # Ge the number of items
+    print(len(my_list))
+
+    # Use index to access specific item --> indexes inclusive (0)
+    print(my_list[0])
+    print(my_list[4:6]) # item at index 4 (inclusive) unit 6 (excluded)
+    print(my_list[4:]) # item at 4 until the end
+    # NEGATIVE INDEX counts from end backwards, back 2 spots
+    print(my_list[-2:]) # item at 4 until the end
+
+    # Remove first 'l'
+    my_list.remove("l")
+    # Insert item at an index
+    my_list.insert(1, "l")
+    print(my_list)
+    
+
+def tuple_demo():
+    print("TUPLE DEMO:")
+
+def set_demo():
+    print("SET DEMO:")
+
+def dict_demo():
+    print("DICT DEMO:")
+
+
