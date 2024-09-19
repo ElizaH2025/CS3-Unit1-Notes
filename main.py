@@ -177,7 +177,17 @@ def dict_demo():
     # How to access items
     print(costumes['jorge'])
     print(costumes.get('cat'))
-    print(costumes["Mr. Titcomb"]) # gives error if key doesn't exist
+    # print(costumes["Mr. Titcomb"]) # gives error if key doesn't exist
+    print("Mr. Titcomb" in costumes)
+
+    # How to add items
+    costumes["Mr. Titcomb"] = { 'popularity %': 1, 'School OK': True }
+
+    # Iterate through dictionary items
+    print("ITERATE THROUGH DICTIONARY")
+    for costume in costumes: 
+        print(costume) #print the KEYS
+        print(costumes[costume]) # print the VALUE
  
 if __name__ == "__main__":
     main()
